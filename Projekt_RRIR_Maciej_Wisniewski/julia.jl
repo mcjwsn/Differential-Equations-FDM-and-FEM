@@ -8,7 +8,7 @@ function solve_bvp(N) # n - liczba pktow przedizalow
     u = zeros(N)
     
     # Funckja sprezystosci
-    E(x) = x <= 1 ? 2.0 : 6.0
+    E(x) = x <= 1 ? 2.0 : 10*(2.1-x)
     
     # lewa stron B(e,v)
     A = zeros(N, N)
@@ -16,7 +16,7 @@ function solve_bvp(N) # n - liczba pktow przedizalow
     b = zeros(N)
     
     # warunek brzegowy drichleta
-    u[end] = 3.0
+    u[end] = 20.0
     
     
     for i in 2:N-1
@@ -61,4 +61,4 @@ plot(x, u, label="u(x)", xlabel="x", ylabel="u(x)", title="Solution to the BVP",
 
 # Zapis
 # dodac sciezke do pliku
-savefig(joinpath("Desktop/Projekt_RRIR_Maciej_Wisniewski", "bvp_solution_julia.png"))
+savefig(joinpath("Desktop", "bvp_solution_julia.png"))

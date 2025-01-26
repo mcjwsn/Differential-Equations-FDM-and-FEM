@@ -28,14 +28,14 @@ def B(i, j, s, k, h):
     Oblicza element B(v, w) macierzy sztywności.
     """
     def E(x):
-        return 2 if 0 <= x <= 1 else 6
+        return 2 if 0 <= x <= 1 else 10*(2.1-x)
     return integrate.quad((lambda x: E(x) * e_prim(i, x, h) * e_prim(j, x, h)), s, k)[0] - 4 * e(i, 0, h) * e(j, 0, h)
 # macierz L(v)
 def L(i, s, k, h):
     """
     Oblicza element L(v) wektora obciążenia.
     """
-    return integrate.quad((lambda x: -1000 * np.sin(np.pi * x) * e(i, x, h)), s, k)[0] - 8 * e(i, 0, h)
+    return integrate.quad((lambda x: -1000 * np.sin(np.pi * x) * e(i, x, h)), s, k)[0] + 60 * e(i, 0, h)
 
 def create_A(n, h):
     """
@@ -76,7 +76,7 @@ def solve(n):
     b = np.array(create_B(n, h)) # prawa strona
 
     # (x,y)
-    return ([h * i for i in range(n + 1)], np.append(np.linalg.solve(a, b) + 3, 3))
+    return ([h * i for i in range(n + 1)], np.append(np.linalg.solve(a, b) + 20, 20))
 
 def show(x, y, n):
     """
