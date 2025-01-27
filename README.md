@@ -3,7 +3,7 @@ Repository presents solution to task from AGH Course of Differentail Equations. 
 ### Math part:
 
 
-<img src="[sciezka/do/obrazu.png](https://github.com/user-attachments/assets/0b24dad6-f16a-497b-8222-0eb85d9fce75)" style='alignement: center'>
+<img src="[sciezka/do/obrazu.png](https://github.com/mcjwsn/Differential-Equations-FDM-and-FEM-solutions-with-Python-Julia-Cpp/blob/main/Math.png]" style='alignement: center'>
 
 ### Coding part was impelemented with python (FEM) and julia,C++(FDM).
 Visualization in python was created using matplotlib and numpy, in Julia using Plot library.
