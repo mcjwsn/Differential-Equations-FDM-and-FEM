@@ -15,7 +15,7 @@ To run:
 ```bash
 python3 FEM-python.py
 ```
-Code requires matplotlib and numpy
+Code requires matplotlib,scipy and numpy
 
 [Code in Julia](https://github.com/mcjwsn/Differential-Equations-FDM-and-FEM-solutions-with-Python-Julia-Cpp/blob/main/FDM/FDM_julia.jl)
 
